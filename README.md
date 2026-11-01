@@ -1,3 +1,11 @@
+# 仿真环境创建
+
+```
+conda create -n mujocopy python=3.8
+```
+
+
+
 # dummy在mujoco中仿真
 
 ## 末端位姿实时显示
@@ -30,23 +38,23 @@ pinocchio动力学python安装：
 pip install pin
 ```
 
-具体参考代码：dummy_inverse_dynamics.cpp和test_pinpcchio.py
+具体参考代码：`dummy_inverse_dynamics.cpp`和`test_pinpcchio.py`
 
 ## 通过pinocchio实现机械臂运动学逆解
 
 思路：获取机械臂的初始轨迹，使机械臂沿着Z轴向下运动，每次在当前姿态Z轴自增并通过pinocchio进行逆解，控制机械臂关节转动
 
-参考代码：ctrl_ee_pin.py
-
-
+参考代码：`ctrl_ee_pin.py`
 
 ## 通过pinocchio实现机械臂逆动力学
 
-参考代码：dummy_inverse_dynamics.cpp
+参考代码：`dummy_inverse_dynamics.cpp`
 
 ## 通过TOPPRA实现机械臂轨迹规划
 
 toppra代码[仓库](https://github.com/hungpham2511/toppra)
 
 可通过pip install toppra直接安装
+
+参考代码：`trajector_plan_toppra.py`
 
